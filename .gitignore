@@ -1,0 +1,70 @@
+# Byte-compiled / optimized / generated files
+__pycache__/
+*.py[cod]
+*.$py.class
+
+# Django / Python runtime / project artifacts
+*.log
+*.pot
+*.pyc
+
+# Database
+db.sqlite3
+
+# Local settings and environment variables
+local_settings.py
+.env
+.venv/
+venv/
+env/
+ENV/
+
+# Media files (user-uploaded content)
+media/
+media/*
+
+# Static files collected (if using collectstatic; often rebuilt in deploy)
+staticfiles/
+static_cdn/
+# or depending on your project:
+# static/
+# static/*
+
+# Editor / IDE / OS-specific files
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db
+
+# Build / packaging / distribution directories
+build/
+dist/
+develop-eggs/
+downloads/
+eggs/
+.eggs/
+parts/
+lib/
+lib64/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+
+# Virtual environment
+.env/
+env/
+venv/
+ENV/
+ENV.bak/
+
+# Test, coverage & temporary files
+.coverage
+.cache/
+htmlcov/
+.tox/
+.coverage.*
+
+# Misc backup or temp files
+*.bak

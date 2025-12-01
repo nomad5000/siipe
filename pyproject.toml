@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=60.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "siipe"          # nombre del paquete público / identificador pip
+version = "0.1.0"
+description = "Aplicación compartida para realizar la conectividad con la extractora"
+readme = "README.md"            # archivo README incluido
+requires-python = ">=3.10"       # versión mínima de Python
+authors = [
+    { name = "Michael Schmidt", email = "nomad5000@yahoo.com" }
+]
+license = { text = "Private Code" }      # o el tipo de licencia que uses
+keywords = ["django", "erp", "siipe", "importar", "weight', 'tickets"]
+
+dependencies = [
+    "Django>=5.0",
+    "playwright==1.56.0",
+]
+
+[project.urls]
+homepage = "https://github.com/usuario/my_django_app"
+repository = "https://github.com/usuario/my_django_app.git"
+documentation = "https://github.com/usuario/my_django_app#readme"
+
+[tool.setuptools.packages.find]
+exclude = ["tests*"]
+
+[packages]
+copalma-backend = {git = "ssh://git@github.com/daneelfx/copalma-backend.git", subdirectory = "sippe"}
+
