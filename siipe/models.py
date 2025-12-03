@@ -77,7 +77,7 @@ class WeightTicketModel(TimeStampedModel):
         verbose_name = "weight ticket"
         verbose_name_plural = "weight tickets"
         ordering = ["-weighing_date"]
-        app_label = "siipe"
+        #app_label = "siipe"
 
     def __str__(self):
         return f"Tiquete {self.ticket_number} – {self.weighing_date.strftime('%Y-%m-%d')}"
