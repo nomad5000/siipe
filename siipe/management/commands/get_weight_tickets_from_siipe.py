@@ -10,6 +10,8 @@ from playwright.sync_api import sync_playwright, TimeoutError
 
 from siipe.models import WeightTicketModel
 
+
+#test
 """
 ________________
 IMPORTANT
@@ -160,7 +162,7 @@ class Command(BaseCommand):
             now = datetime.now(bogota_tz)
             past_date = now - timedelta(days=days_back)
             past_date_first_minute = past_date.replace(hour=0, minute=0, second=0, microsecond=0)
-            print(f"getting results for start date: {past_date_first_minute.strftime("%d/%m/%Y %I:%M:%S %p")} \n")
+            print(f'getting results for start date: {past_date_first_minute.strftime("%d/%m/%Y %I:%M:%S %p")} \n')
             start_date.fill(past_date_first_minute.strftime("%d/%m/%Y %I:%M:%S %p").lower().replace("am", "a.m.").replace("pm", "p.m."))
             end_date.fill(now.strftime("%d/%m/%Y %I:%M:%S %p").lower().replace("am", "a.m.").replace("pm", "p.m."))
             print(f"getting results for end date: {now.strftime("%d/%m/%Y %I:%M:%S %p")} \n")

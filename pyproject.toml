@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "siipe"          # nombre del paquete público / identificador pip
-version = "0.1.0"
+version = "0.1.1"
 description = "Aplicación compartida para realizar la conectividad con la extractora"
 readme = "README.md"            # archivo README incluido
 requires-python = ">=3.10"       # versión mínima de Python
