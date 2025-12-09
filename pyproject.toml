@@ -17,7 +17,8 @@ keywords = ["django", "erp", "siipe", "importar", "weight', 'tickets"]
 dependencies = [
     "Django>=3.0",
     "playwright==1.56.0",
-    "django-model-utils >=5.0",
+    "django-model-utils==5.0",
+    "pandas==2.3.3"
 ]
 
 [project.urls]

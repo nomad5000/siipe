@@ -165,7 +165,7 @@ class Command(BaseCommand):
             print(f'getting results for start date: {past_date_first_minute.strftime("%d/%m/%Y %I:%M:%S %p")} \n')
             start_date.fill(past_date_first_minute.strftime("%d/%m/%Y %I:%M:%S %p").lower().replace("am", "a.m.").replace("pm", "p.m."))
             end_date.fill(now.strftime("%d/%m/%Y %I:%M:%S %p").lower().replace("am", "a.m.").replace("pm", "p.m."))
-            print(f"getting results for end date: {now.strftime("%d/%m/%Y %I:%M:%S %p")} \n")
+            print(f'getting results for end date: {now.strftime("%d/%m/%Y %I:%M:%S %p")} \n')
             iframe.locator('input[value="View Report"]').wait_for(state="visible",timeout=10000)
             iframe.locator('input[value="View Report"]').click()
             iframe.frame_locator("#ReportFramervImprimir").frame_locator('#report').locator('.a286').wait_for(state="visible", timeout=10000)
