@@ -173,16 +173,20 @@ class Command(BaseCommand):
             results_table_rows = iframe.frame_locator("#ReportFramervImprimir").frame_locator('#report').locator('.a286 tr')
             results = Command._extract_result_table_to_array(results_table_rows)
             next_button = iframe.locator('input[type="image"][src="/PortalProveedor/Reserved.ReportViewerWebControl.axd?OpType=Resource&Version=8.0.50727.42&Name=Icons.NextPage.gif"]')
+            run_once = False
             try:
                 next_button.wait_for(state='visible', timeout=10000)
             except TimeoutError as e:
+                run_once=True
                 print('just one result page')
-            while next_button.is_visible():
+            while next_button.is_visible() or run_once:
+                run_once=False
                 next_button.click()
                 page.wait_for_timeout(timeout=1000)
                 iframe.frame_locator("#ReportFramervImprimir").frame_locator('#report').locator('.a286').wait_for(state="visible", timeout=10000)
                 results_table = iframe.frame_locator("#ReportFramervImprimir").frame_locator('#report').locator('.a286 tr')
                 results += Command._extract_result_table_to_array(results_table)
+
             unique_results = self._filter_results_for_unique(results)
             browser.close()
             return unique_results[2:]
