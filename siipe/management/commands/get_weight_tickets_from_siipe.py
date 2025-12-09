@@ -174,7 +174,7 @@ class Command(BaseCommand):
             try:
                 next_button.wait_for(state='visible', timeout=10000)
             except TimeoutError as e:
-                #in case only one results page
+                #in case only one results page TODO delete this comment
                 print('just one result page')
                 iframe.frame_locator("#ReportFramervImprimir").frame_locator('#report').locator('.a286').wait_for(state="visible", timeout=10000)
                 results_table = iframe.frame_locator("#ReportFramervImprimir").frame_locator('#report').locator('.a286 tr')
